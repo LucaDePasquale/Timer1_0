@@ -3,4 +3,5 @@ project(Timer1_0)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Timer1_0 main.cpp)
+add_executable(Timer1_0 main.cpp
+        Observer.h)
