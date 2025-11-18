@@ -55,8 +55,14 @@ build CMakeFiles/Timer1_0.dir/main.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug
   OBJECT_DIR = CMakeFiles/Timer1_0.dir
   OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
 
-build CMakeFiles/Timer1_0.dir/Timer.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/cmake-build-debug/Timer.cpp || cmake_object_order_depends_target_Timer1_0
+build CMakeFiles/Timer1_0.dir/Timer.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/Timer.cpp || cmake_object_order_depends_target_Timer1_0
   DEP_FILE = CMakeFiles/Timer1_0.dir/Timer.cpp.o.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/Timer1_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
+
+build CMakeFiles/Timer1_0.dir/Datatime.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/Datatime.cpp || cmake_object_order_depends_target_Timer1_0
+  DEP_FILE = CMakeFiles/Timer1_0.dir/Datatime.cpp.o.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles/Timer1_0.dir
   OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
@@ -69,7 +75,7 @@ build CMakeFiles/Timer1_0.dir/Timer.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debu
 #############################################
 # Link the executable Timer1_0
 
-build Timer1_0: CXX_EXECUTABLE_LINKER__Timer1_0_Debug CMakeFiles/Timer1_0.dir/main.cpp.o CMakeFiles/Timer1_0.dir/Timer.cpp.o
+build Timer1_0: CXX_EXECUTABLE_LINKER__Timer1_0_Debug CMakeFiles/Timer1_0.dir/main.cpp.o CMakeFiles/Timer1_0.dir/Timer.cpp.o CMakeFiles/Timer1_0.dir/Datatime.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/Timer1_0.dir
   POST_BUILD = :
