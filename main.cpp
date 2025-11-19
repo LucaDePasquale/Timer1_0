@@ -1,20 +1,70 @@
 #include <iostream>
+#include <ncurses.h>
 
-// TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+#include "Gui.h"
+#include "Timer.h"
+#include "Datetime.h"
+
 int main() {
-    // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the
-    // <b>lang</b> variable name to see how CLion can help you rename it.
-    auto lang = "C++";
-    std::cout << "Hello and welcome to " << lang << "!\n";
+    auto timer = std::make_shared<Timer>();
+    auto date_time = std::make_shared<DateTime>();
+    const auto gui = std::make_unique<GUI>(timer, date_time);
 
-    for (int i = 1; i <= 5; i++) {
-        // TIP Press <shortcut actionId="Debug"/> to start debugging your code.
-        // We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/>
-        // breakpoint for you, but you can always add more by pressing
-        // <shortcut actionId="ToggleLineBreakpoint"/>.
-        std::cout << "i = " << i << std::endl;
+    bool terminate = false;
+    gui->init();
+
+    while (!terminate) {
+        const int ch = getch();
+        gui->printDateTime();
+        switch (ch) {
+            case 'v':
+                date_time->setViewmode();
+            break;
+            case 's':
+                if (!timer->isRunning()) {
+                    try {
+                        timer->setUpTimer();
+                        gui->printTimerStatus("running");
+                    } catch (const std::exception& e) {
+                        gui->printError(e.what());
+                    }
+                } else {
+                    timer->stopTimer();
+                    gui->printTimerStatus("paused");
+                }
+            break;
+            case 'r':
+                try {
+                    timer->restartTimer();
+                    gui->printTimerStatus(" ");
+                } catch (std::exception& e) {
+                    gui->printError(e.what());
+                }
+
+            break;
+            case KEY_UP:
+                if (!timer->isRunning()) {
+                    timer->setDuration('u');
+                    gui->printTimerStatus(" ");
+                }
+            break;
+            case KEY_DOWN:
+                if (!timer->isRunning()) {
+                    timer->setDuration('d');
+                    gui->printTimerStatus(" ");
+                }
+            break;
+            case 'q':
+                terminate = true;
+            break;
+            default:
+                ;
+        }
+        if (timer->isRunning())
+            timer->getTick();
     }
+
+    gui->close();
 
     return 0;
 }
