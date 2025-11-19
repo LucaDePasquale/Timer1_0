@@ -10,7 +10,8 @@
 	{
 		"commands" : 
 		[
-			"add_executable"
+			"add_executable",
+			"target_link_libraries"
 		],
 		"files" : 
 		[
@@ -24,7 +25,13 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 6,
+				"line" : 9,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
 				"parent" : 0
 			}
 		]
@@ -51,7 +58,8 @@
 			[
 				0,
 				3,
-				5
+				5,
+				7
 			]
 		}
 	],
@@ -67,6 +75,15 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lcurses",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 2,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libform.so",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
@@ -86,7 +103,8 @@
 			[
 				0,
 				3,
-				5
+				5,
+				7
 			]
 		},
 		{
@@ -96,7 +114,8 @@
 				1,
 				2,
 				4,
-				6
+				6,
+				8
 			]
 		}
 	],
@@ -132,12 +151,23 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Datatime.cpp",
+			"path" : "Datetime.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "Datatime.h",
+			"path" : "Datetime.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Gui.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Gui.h",
 			"sourceGroupIndex" : 1
 		}
 	],

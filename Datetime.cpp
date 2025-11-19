@@ -2,7 +2,7 @@
 // Created by depa on 18.11.25.
 //
 
-#include "Datatime.h"
+#include "Datetime.h"
 
 std::string DateTime::updateCurrent() const {
     const auto now = std::chrono::system_clock::now();

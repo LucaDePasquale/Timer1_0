@@ -2,8 +2,8 @@
 // Created by depa on 18.11.25.
 //
 
-#ifndef DATATIME_H
-#define DATATIME_H
+#ifndef DATETIME_H
+#define DATETIME_H
 #include <chrono>
 
 enum Viewmode {
@@ -27,4 +27,4 @@ private:
 
 
 
-#endif //DATATIME_H
+#endif

@@ -12,6 +12,7 @@
 #include <chrono>
 
 class Timer :public Subject {
+public:
     Timer (): remainingTime(0),isrunning(false),duration(0) {}
     ~Timer() override{}
     int getRemainingTime() const;
