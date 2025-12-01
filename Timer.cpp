@@ -12,10 +12,15 @@ void Timer::setUpTimer(){
     remainingTime=duration;
     start = std::chrono::steady_clock::now();
     isrunning = true;
+    last_checked = start;
 
 }
 // Get next timer tick and calculate seconds
 void Timer::getTick() {
+    if (!isrunning) {
+        return;   //no update if is paused
+    }
+
     const auto now = std::chrono::steady_clock::now();
     const auto diff = std::chrono::duration_cast<std::chrono::seconds>(now - last_checked).count();
 
@@ -34,6 +39,7 @@ void Timer::stopTimer(){
 }
 void Timer::resumeTimer(){
     isrunning = true;
+    last_checked = std::chrono::steady_clock::now();
     getTick();
     notify();
 
@@ -59,6 +65,7 @@ void Timer::setDuration(int s){
     if(s >=0){
         duration = s;
         remainingTime =duration;
+        last_checked = std::chrono::steady_clock::now();
 
         notify();
     }

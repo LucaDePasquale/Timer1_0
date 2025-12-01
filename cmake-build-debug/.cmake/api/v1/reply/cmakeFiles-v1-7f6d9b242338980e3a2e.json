@@ -129,17 +129,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindCurses.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPkgConfig.cmake"
+			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindwxWidgets.cmake"
 		},
 		{
 			"isCMake" : true,
@@ -154,12 +144,7 @@
 		{
 			"isCMake" : true,
 			"isExternal" : true,
-			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake"
-		},
-		{
-			"isCMake" : true,
-			"isExternal" : true,
-			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake"
+			"path" : "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/UsewxWidgets.cmake"
 		}
 	],
 	"kind" : "cmakeFiles",
