@@ -160,6 +160,14 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_runTests: phony || cmake_object_order_depends_target_core
 
+build test/CMakeFiles/runTests.dir/test_datetime.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_datetime.cpp || cmake_object_order_depends_target_runTests
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
+  DEP_FILE = test/CMakeFiles/runTests.dir/test_datetime.cpp.o.d
+  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = test/CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/runTests.dir
+
 build test/CMakeFiles/runTests.dir/test_timer.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_timer.cpp || cmake_object_order_depends_target_runTests
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
   DEP_FILE = test/CMakeFiles/runTests.dir/test_timer.cpp.o.d
@@ -176,7 +184,7 @@ build test/CMakeFiles/runTests.dir/test_timer.cpp.o: CXX_COMPILER__runTests_unsc
 #############################################
 # Link the executable test/runTests
 
-build test/runTests: CXX_EXECUTABLE_LINKER__runTests_Debug test/CMakeFiles/runTests.dir/test_timer.cpp.o | libcore.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libcore.a
+build test/runTests: CXX_EXECUTABLE_LINKER__runTests_Debug test/CMakeFiles/runTests.dir/test_datetime.cpp.o test/CMakeFiles/runTests.dir/test_timer.cpp.o | libcore.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libcore.a
   FLAGS = -pthread -g
   LINK_LIBRARIES = libcore.a  /usr/lib/x86_64-linux-gnu/libgtest.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  -lpthread  /usr/lib/x86_64-linux-gnu/libgtest.a
   OBJECT_DIR = test/CMakeFiles/runTests.dir
