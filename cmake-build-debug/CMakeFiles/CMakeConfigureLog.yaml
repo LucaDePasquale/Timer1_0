@@ -544,3 +544,36 @@ events:
       Running the CXX compiler's linker: "/usr/bin/ld" "-v"
       GNU ld (GNU Binutils for Ubuntu) 2.42
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake:39 (find_dependency)"
+      - "/home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindGTest.cmake:197 (find_package)"
+      - "test/CMakeLists.txt:2 (find_package)"
+    directories:
+      source: "/home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BKChpz"
+      binary: "/home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BKChpz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BKChpz'
+        
+        Run Build Command(s): /home/depa/Desktop/clino/clion-2024.3.4/bin/ninja/linux/x64/ninja -v cmTC_b2937
+        [1/2] /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b2937.dir/src.c.o -c /home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-BKChpz/src.c
+        [2/2] : && /usr/bin/cc   CMakeFiles/cmTC_b2937.dir/src.c.o -o cmTC_b2937   && :
+        
+      exitCode: 0
+...

@@ -24,6 +24,7 @@ std::string DateTime::updateCurrent() const {
     }
 }
 
+
 void DateTime::setViewmode() {
     if (mode == LONG_FORMAT)
         mode = MEDIUM_FORMAT;

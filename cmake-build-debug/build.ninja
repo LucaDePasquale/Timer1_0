@@ -41,45 +41,70 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/depa/Desktop/Timer1.0/cmake-build-debug/
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target core
+
+
+#############################################
+# Order-only phony target for core
+
+build cmake_object_order_depends_target_core: phony || .
+
+build CMakeFiles/core.dir/src/Timer.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/depa/Desktop/Timer1.0/src/Timer.cpp || cmake_object_order_depends_target_core
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
+  DEP_FILE = CMakeFiles/core.dir/src/Timer.cpp.o.d
+  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir/src
+
+build CMakeFiles/core.dir/src/Datetime.cpp.o: CXX_COMPILER__core_unscanned_Debug /home/depa/Desktop/Timer1.0/src/Datetime.cpp || cmake_object_order_depends_target_core
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
+  DEP_FILE = CMakeFiles/core.dir/src/Datetime.cpp.o.d
+  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = CMakeFiles/core.dir
+  OBJECT_FILE_DIR = CMakeFiles/core.dir/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target core
+
+
+#############################################
+# Link the static library libcore.a
+
+build libcore.a: CXX_STATIC_LIBRARY_LINKER__core_Debug CMakeFiles/core.dir/src/Timer.cpp.o CMakeFiles/core.dir/src/Datetime.cpp.o
+  LANGUAGE_COMPILE_FLAGS = -pthread -g
+  OBJECT_DIR = CMakeFiles/core.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libcore.a
+  TARGET_PDB = core.a.dbg
+
+# =============================================================================
 # Object build statements for EXECUTABLE target Timer1_0
 
 
 #############################################
 # Order-only phony target for Timer1_0
 
-build cmake_object_order_depends_target_Timer1_0: phony || .
+build cmake_object_order_depends_target_Timer1_0: phony || cmake_object_order_depends_target_core
 
-build CMakeFiles/Timer1_0.dir/main.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/main.cpp || cmake_object_order_depends_target_Timer1_0
+build CMakeFiles/Timer1_0.dir/src/main.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/src/main.cpp || cmake_object_order_depends_target_Timer1_0
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
-  DEP_FILE = CMakeFiles/Timer1_0.dir/main.cpp.o.d
+  DEP_FILE = CMakeFiles/Timer1_0.dir/src/main.cpp.o.d
   FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
   OBJECT_DIR = CMakeFiles/Timer1_0.dir
-  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir/src
 
-build CMakeFiles/Timer1_0.dir/Timer.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/Timer.cpp || cmake_object_order_depends_target_Timer1_0
+build CMakeFiles/Timer1_0.dir/src/Gui.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/src/Gui.cpp || cmake_object_order_depends_target_Timer1_0
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
-  DEP_FILE = CMakeFiles/Timer1_0.dir/Timer.cpp.o.d
+  DEP_FILE = CMakeFiles/Timer1_0.dir/src/Gui.cpp.o.d
   FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
   OBJECT_DIR = CMakeFiles/Timer1_0.dir
-  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
-
-build CMakeFiles/Timer1_0.dir/Datetime.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/Datetime.cpp || cmake_object_order_depends_target_Timer1_0
-  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
-  DEP_FILE = CMakeFiles/Timer1_0.dir/Datetime.cpp.o.d
-  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
-  OBJECT_DIR = CMakeFiles/Timer1_0.dir
-  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
-
-build CMakeFiles/Timer1_0.dir/Gui.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug /home/depa/Desktop/Timer1.0/Gui.cpp || cmake_object_order_depends_target_Timer1_0
-  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
-  DEP_FILE = CMakeFiles/Timer1_0.dir/Gui.cpp.o.d
-  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always
-  INCLUDES = -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
-  OBJECT_DIR = CMakeFiles/Timer1_0.dir
-  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir
+  OBJECT_FILE_DIR = CMakeFiles/Timer1_0.dir/src
 
 
 # =============================================================================
@@ -89,9 +114,9 @@ build CMakeFiles/Timer1_0.dir/Gui.cpp.o: CXX_COMPILER__Timer1_0_unscanned_Debug 
 #############################################
 # Link the executable Timer1_0
 
-build Timer1_0: CXX_EXECUTABLE_LINKER__Timer1_0_Debug CMakeFiles/Timer1_0.dir/main.cpp.o CMakeFiles/Timer1_0.dir/Timer.cpp.o CMakeFiles/Timer1_0.dir/Datetime.cpp.o CMakeFiles/Timer1_0.dir/Gui.cpp.o
+build Timer1_0: CXX_EXECUTABLE_LINKER__Timer1_0_Debug CMakeFiles/Timer1_0.dir/src/main.cpp.o CMakeFiles/Timer1_0.dir/src/Gui.cpp.o | libcore.a || libcore.a
   FLAGS = -pthread -g
-  LINK_LIBRARIES = -L/usr/lib/x86_64-linux-gnu  -pthread  -lwx_gtk3u_core-3.2  -lwx_baseu-3.2
+  LINK_LIBRARIES = libcore.a  -L/usr/lib/x86_64-linux-gnu  -pthread  -lwx_gtk3u_core-3.2  -lwx_baseu-3.2
   OBJECT_DIR = CMakeFiles/Timer1_0.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -122,7 +147,73 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/depa/Desktop/Timer1.0/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target runTests
+
+
+#############################################
+# Order-only phony target for runTests
+
+build cmake_object_order_depends_target_runTests: phony || cmake_object_order_depends_target_core
+
+build test/CMakeFiles/runTests.dir/test_timer.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_timer.cpp || cmake_object_order_depends_target_runTests
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
+  DEP_FILE = test/CMakeFiles/runTests.dir/test_timer.cpp.o.d
+  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = test/CMakeFiles/runTests.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/runTests.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target runTests
+
+
+#############################################
+# Link the executable test/runTests
+
+build test/runTests: CXX_EXECUTABLE_LINKER__runTests_Debug test/CMakeFiles/runTests.dir/test_timer.cpp.o | libcore.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libcore.a
+  FLAGS = -pthread -g
+  LINK_LIBRARIES = libcore.a  /usr/lib/x86_64-linux-gnu/libgtest.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  -lpthread  /usr/lib/x86_64-linux-gnu/libgtest.a
+  OBJECT_DIR = test/CMakeFiles/runTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = test/runTests
+  TARGET_PDB = runTests.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build test/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/depa/Desktop/Timer1.0/cmake-build-debug/test && /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build test/edit_cache: phony test/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build test/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/depa/Desktop/Timer1.0/cmake-build-debug/test && /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S/home/depa/Desktop/Timer1.0 -B/home/depa/Desktop/Timer1.0/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build test/rebuild_cache: phony test/CMakeFiles/rebuild_cache.util
+
+# =============================================================================
 # Target aliases.
+
+build core: phony libcore.a
+
+build runTests: phony test/runTests
 
 # =============================================================================
 # Folder targets.
@@ -132,7 +223,14 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/depa/Desktop/Timer1.0/cmake-build-debug
 
-build all: phony Timer1_0
+build all: phony libcore.a Timer1_0 test/all
+
+# =============================================================================
+
+#############################################
+# Folder: /home/depa/Desktop/Timer1.0/cmake-build-debug/test
+
+build test/all: phony test/runTests
 
 # =============================================================================
 # Built-in targets
@@ -141,14 +239,14 @@ build all: phony Timer1_0
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/depa/Desktop/Timer1.0/CMakeLists.txt /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindwxWidgets.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-Initialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/UsewxWidgets.cmake CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/depa/Desktop/Timer1.0/CMakeLists.txt /home/depa/Desktop/Timer1.0/test/CMakeLists.txt /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindGTest.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindThreads.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindwxWidgets.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/GoogleTest.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-Initialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/UsewxWidgets.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/depa/Desktop/Timer1.0/CMakeLists.txt /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindwxWidgets.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-Initialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/UsewxWidgets.cmake CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
+build /home/depa/Desktop/Timer1.0/CMakeLists.txt /home/depa/Desktop/Timer1.0/test/CMakeLists.txt /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCXXInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeCommonLanguageInclude.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeFindDependencyMacro.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeGenericSystem.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeInitializeConfigs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeLanguageInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInformation.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CMakeSystemSpecificInitialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckCSourceCompiles.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckIncludeFile.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/CheckLibraryExists.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/CMakeCommonCompilerMacros.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Compiler/GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindGTest.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageHandleStandardArgs.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindPackageMessage.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindThreads.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/FindwxWidgets.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/GoogleTest.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Internal/CheckSourceCompiles.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-C.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU-CXX.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-GNU.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux-Initialize.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/Linux.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/Platform/UnixPaths.cmake /home/depa/Desktop/clino/clion-2024.3.4/bin/cmake/linux/x64/share/cmake-3.30/Modules/UsewxWidgets.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake CMakeCache.txt CMakeFiles/3.30.5/CMakeCCompiler.cmake CMakeFiles/3.30.5/CMakeCXXCompiler.cmake CMakeFiles/3.30.5/CMakeSystem.cmake: phony
 
 
 #############################################

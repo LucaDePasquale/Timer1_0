@@ -1,3 +1,7 @@
+/home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/core.dir
 /home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/Timer1_0.dir
 /home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/depa/Desktop/Timer1.0/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/depa/Desktop/Timer1.0/cmake-build-debug/test/CMakeFiles/runTests.dir
+/home/depa/Desktop/Timer1.0/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/home/depa/Desktop/Timer1.0/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
