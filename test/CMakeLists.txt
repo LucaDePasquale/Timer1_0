@@ -1,22 +1,19 @@
 
+# Cerca GoogleTest
 find_package(GTest REQUIRED)
 
-# search all file .cpp in the directory test
 file(GLOB TEST_SOURCES *.cpp)
 
+add_executable(runalltest ${TEST_SOURCES})
 
-add_executable(runTests ${TEST_SOURCES})
+target_include_directories(runalltest PRIVATE ../src)
 
-# Include the header
-target_include_directories(runTests PRIVATE ${CMAKE_SOURCE_DIR}/src)
-
-# Link to library core and GoogleTest
-target_link_libraries(runTests
+target_link_libraries(runalltest
+        PRIVATE
         core
         GTest::gtest
         GTest::gtest_main
         pthread
 )
 
-# Regist test
-add_test(NAME AllTests COMMAND runTests)
+add_test(NAME AllTests COMMAND runalltest)

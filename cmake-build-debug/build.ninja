@@ -152,46 +152,54 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for EXECUTABLE target runTests
+# Object build statements for EXECUTABLE target runalltest
 
 
 #############################################
-# Order-only phony target for runTests
+# Order-only phony target for runalltest
 
-build cmake_object_order_depends_target_runTests: phony || cmake_object_order_depends_target_core
+build cmake_object_order_depends_target_runalltest: phony || cmake_object_order_depends_target_core
 
-build test/CMakeFiles/runTests.dir/test_datetime.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_datetime.cpp || cmake_object_order_depends_target_runTests
+build test/CMakeFiles/runalltest.dir/runalltest.cpp.o: CXX_COMPILER__runalltest_unscanned_Debug /home/depa/Desktop/Timer1.0/test/runalltest.cpp || cmake_object_order_depends_target_runalltest
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
-  DEP_FILE = test/CMakeFiles/runTests.dir/test_datetime.cpp.o.d
+  DEP_FILE = test/CMakeFiles/runalltest.dir/runalltest.cpp.o.d
   FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
-  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
-  OBJECT_DIR = test/CMakeFiles/runTests.dir
-  OBJECT_FILE_DIR = test/CMakeFiles/runTests.dir
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/test/../src -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = test/CMakeFiles/runalltest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/runalltest.dir
 
-build test/CMakeFiles/runTests.dir/test_timer.cpp.o: CXX_COMPILER__runTests_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_timer.cpp || cmake_object_order_depends_target_runTests
+build test/CMakeFiles/runalltest.dir/test_datetime.cpp.o: CXX_COMPILER__runalltest_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_datetime.cpp || cmake_object_order_depends_target_runalltest
   DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
-  DEP_FILE = test/CMakeFiles/runTests.dir/test_timer.cpp.o.d
+  DEP_FILE = test/CMakeFiles/runalltest.dir/test_datetime.cpp.o.d
   FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
-  INCLUDES = -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
-  OBJECT_DIR = test/CMakeFiles/runTests.dir
-  OBJECT_FILE_DIR = test/CMakeFiles/runTests.dir
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/test/../src -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = test/CMakeFiles/runalltest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/runalltest.dir
+
+build test/CMakeFiles/runalltest.dir/test_timer.cpp.o: CXX_COMPILER__runalltest_unscanned_Debug /home/depa/Desktop/Timer1.0/test/test_timer.cpp || cmake_object_order_depends_target_runalltest
+  DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
+  DEP_FILE = test/CMakeFiles/runalltest.dir/test_timer.cpp.o.d
+  FLAGS = -pthread -g -std=gnu++20 -fdiagnostics-color=always -DGTEST_HAS_PTHREAD=1
+  INCLUDES = -I/home/depa/Desktop/Timer1.0/test/../src -I/home/depa/Desktop/Timer1.0/src -isystem /usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.2 -isystem /usr/include/wx-3.2
+  OBJECT_DIR = test/CMakeFiles/runalltest.dir
+  OBJECT_FILE_DIR = test/CMakeFiles/runalltest.dir
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target runTests
+# Link build statements for EXECUTABLE target runalltest
 
 
 #############################################
-# Link the executable test/runTests
+# Link the executable test/runalltest
 
-build test/runTests: CXX_EXECUTABLE_LINKER__runTests_Debug test/CMakeFiles/runTests.dir/test_datetime.cpp.o test/CMakeFiles/runTests.dir/test_timer.cpp.o | libcore.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libcore.a
+build test/runalltest: CXX_EXECUTABLE_LINKER__runalltest_Debug test/CMakeFiles/runalltest.dir/runalltest.cpp.o test/CMakeFiles/runalltest.dir/test_datetime.cpp.o test/CMakeFiles/runalltest.dir/test_timer.cpp.o | libcore.a /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a || libcore.a
   FLAGS = -pthread -g
   LINK_LIBRARIES = libcore.a  /usr/lib/x86_64-linux-gnu/libgtest.a  /usr/lib/x86_64-linux-gnu/libgtest_main.a  -lpthread  /usr/lib/x86_64-linux-gnu/libgtest.a
-  OBJECT_DIR = test/CMakeFiles/runTests.dir
+  OBJECT_DIR = test/CMakeFiles/runalltest.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = test/runTests
-  TARGET_PDB = runTests.dbg
+  TARGET_FILE = test/runalltest
+  TARGET_PDB = runalltest.dbg
 
 
 #############################################
@@ -221,7 +229,7 @@ build test/rebuild_cache: phony test/CMakeFiles/rebuild_cache.util
 
 build core: phony libcore.a
 
-build runTests: phony test/runTests
+build runalltest: phony test/runalltest
 
 # =============================================================================
 # Folder targets.
@@ -238,7 +246,7 @@ build all: phony libcore.a Timer1_0 test/all
 #############################################
 # Folder: /home/depa/Desktop/Timer1.0/cmake-build-debug/test
 
-build test/all: phony test/runTests
+build test/all: phony test/runalltest
 
 # =============================================================================
 # Built-in targets
